@@ -1,0 +1,22 @@
+{
+    "name": "@andyskiba/export-structure",
+    "description": "Helper-widget for internal usage. Get grist tables and columns to specified tables.",
+    "homePage": "https://github.com/AndySkiba/grist-widgets",
+    "version": "0.0.1",
+    "grist": {
+      "name": "Export-Structure",
+      "url": "https://andyskiba.github.io/grist-widgets/export-structure/index.html",
+      "widgetId": "@AndySkiba/export-structure",
+      "published": false,
+      "accessLevel": "full",
+      "renderAfterReady": true,
+      "description": "Put db structure to tables.",
+      "authors": [
+        {
+          "name": "Andy Skiba",
+          "url": "https://github.com/AndySkiba"
+        }
+      ],
+      "isGristLabsMaintained": false
+    }
+  }
