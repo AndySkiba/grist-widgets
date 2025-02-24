@@ -70,19 +70,20 @@
       if (selectedRecord) {
         grist.setCursorPos({rowId: selectedRecord.id});
         grist.setOption("selected", selectedRecord.id);
+        console.log("DDM: Saving selected position  " + selectedRecord.id);
       }
     });
 
-    console.log("getOption called");
+    console.log("DDM: getOption called");
     grist.getOption("selected").then(function (selected){
         
-        console.log("Option received " + selected);
+        console.log("DDM: Option received " + selected);
         grist.setCursorPos({rowId: selected});
         selectedId = selected;
 
         const index = allRecords.findIndex(r => r.id === selected);
-        console.log("Selected index is " + index);
-        
+        console.log("DDM: Selected index is " + index);
+
         const dropdown = document.getElementById('dropdown');
         dropdown.value = index;
      })
