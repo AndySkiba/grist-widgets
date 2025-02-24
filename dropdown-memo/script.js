@@ -1,4 +1,4 @@
-function showError(msg) {
+  function showError(msg) {
     let el = document.getElementById('error');
     if (!msg) {
       el.style.display = 'none';
@@ -25,6 +25,8 @@ function showError(msg) {
     }
   }
   
+  let selectedId = -1;
+
   function initGrist() {
     grist.ready({
       columns: [{ name: "OptionsToSelect", title: 'Options to select', type: 'Any' }],
@@ -71,11 +73,18 @@ function showError(msg) {
       }
     });
 
+    console.log("getOption called");
     grist.getOption("selected").then(function (selected){
+        
+        console.log("Option received " + selected);
         grist.setCursorPos({rowId: selected});
+        selectedId = selected;
+
         const index = allRecords.findIndex(r => r.id === selected);
+        console.log("Selected index is " + index);
+        
         const dropdown = document.getElementById('dropdown');
-        dropdown.value = index
+        dropdown.value = index;
      })
   }
   
