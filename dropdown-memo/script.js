@@ -67,8 +67,16 @@ function showError(msg) {
       const selectedRecord = allRecords[selectedIndex];
       if (selectedRecord) {
         grist.setCursorPos({rowId: selectedRecord.id});
+        grist.setOption("selected", selectedRecord.id);
       }
     });
+
+    grist.getOption("selected").then(function (selected){
+        grist.setCursorPos({rowId: selected});
+        const index = allRecords.findIndex(r => r.id === selected);
+        const dropdown = document.getElementById('dropdown');
+        dropdown.value = index
+     })
   }
   
   document.addEventListener('DOMContentLoaded', initGrist);
