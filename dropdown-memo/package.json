@@ -1,0 +1,22 @@
+{
+    "name": "@andyskiba/drop-down-memo",
+    "description": "Dropdown widget for Grist remembering choice.",
+    "homePage": "https://github.com/AndySkiba/grist-widgets",
+    "version": "0.0.1",
+    "grist": {
+      "name": "Drop-down-memo Widget",
+      "url": "https://andyskiba.github.io/grist-widgets/dropdown-memo/index.html",
+      "widgetId": "@andyskiba/drop-down-memo",
+      "published": false,
+      "accessLevel": "read table",
+      "renderAfterReady": true,
+      "description": "Display a drop-down menu with options from a column.",
+      "authors": [
+        {
+          "name": "Andy Skiba",
+          "url": "https://github.com/AndySkiba"
+        }
+      ],
+      "isGristLabsMaintained": false
+    }
+  }
